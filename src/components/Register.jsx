@@ -1,16 +1,20 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 const Register = () => {
-    const [username, setUsername]= useState ("")
-    const [password, setPassword]= useState ("")
-    const [register, setRegister]= useState(true)
 
     const submitHandler = (e) => {
         e.preventDefault()
         let body = { username, password }
         axios
-        // .post(register ? '/register' : )
+        .post("/register", body)
+        .then((res) = {
+            
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+        console.log(`submit handled`)
     }
 
     return (

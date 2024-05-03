@@ -2,12 +2,13 @@ const express = require (`express`)
 const cors = require (`cors`)
 const dotenv = require (`dotenv`)
 const session = require (`express-session`)
+const register = require (`./controllers/Register`)
 
 dotenv.config()
 const {PORT} = process.env
 const app = express()
 
-// app.post(`/Login`, login)
+app.post(`/register`, register)
 
 app.use(
     session({

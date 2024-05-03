@@ -15,6 +15,7 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
+            <input type="text" placeholder="Search..."/>
         </header>
     )
 }
