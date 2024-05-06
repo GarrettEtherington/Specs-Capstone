@@ -3,19 +3,19 @@ import axios from "axios";
 
 const Register = () => {
 
-    const submitHandler = (e) => {
-        e.preventDefault()
-        let body = { username, password }
-        axios
-        .post("/register", body)
-        .then((res) = {
+    // const submitHandler = (e) => {
+    //     e.preventDefault()
+    //     let body = { username, password }
+    //     axios
+    //     .post("/register", body)
+    //     .then((res) = {
             
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-        console.log(`submit handled`)
-    }
+    //     })
+    //     .catch((err) => {
+    //         console.log(err)
+    //     })
+    //     console.log(`submit handled`)
+    // }
 
     return (
         <main>
@@ -23,7 +23,7 @@ const Register = () => {
             <form>
                 <input placeholder="enter username"/>
                 <input placeholder="enter password"/>
-                <button>sign up uwu</button>
+                <button>sign up UwU</button>
             </form>
         </main>
     )
