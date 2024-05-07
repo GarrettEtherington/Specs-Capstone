@@ -16,7 +16,7 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
-            <input className={styles.heroSearch} type="text" placeholder="Search for a hero" />
+            <input className={styles.sinput} type="text" placeholder="Search for a hero" />
         </header>
     )
 }

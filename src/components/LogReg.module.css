@@ -1,0 +1,36 @@
+.mane {
+    margin: 0vh 0vh 0vh 30vw;
+    border: 5px solid black;
+    width: 40vw;
+    height: 45.39vw;
+}
+
+.hi {
+margin: 0vw 0vw 0vw 4vw;
+font-size: 90px;
+}
+
+.hewwow {
+    margin: 0vw 0vw 0vw 12vw;
+    font-size: 90px;
+}
+
+.userN {
+    margin: 10vh 0vh 0vh 32vh;
+    display: flex;
+    position: relative;
+}
+
+.passW {
+    margin: 10vh 0vh 0vh 32vh;
+    display: flex;
+    position: relative;   
+}
+
+.thisButtonSucks {
+    margin: 0vw 0vw 0vw 0vw;
+    display: flex;
+    position: relative;
+    left: 19vw;
+    top: 10vw;
+}

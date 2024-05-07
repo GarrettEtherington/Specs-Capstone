@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import styles from "./LogReg.module.css"
 
 const Register = () => {
 
@@ -18,12 +19,12 @@ const Register = () => {
     // }
 
     return (
-        <main>
-            <h1>konnichiwa</h1>
+        <main className={styles.mane}>
+            <h1 className={styles.hewwow}>Sign Up</h1>
             <form>
-                <input placeholder="enter username"/>
-                <input placeholder="enter password"/>
-                <button>sign up UwU</button>
+                <input placeholder="choose username" className={styles.userN}/>
+                <input placeholder="choose password" className={styles.passW}/>
+                <button className={styles.thisButtonSucks}>log in</button>
             </form>
         </main>
     )

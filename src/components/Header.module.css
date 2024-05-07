@@ -1,18 +1,14 @@
 header {
-    background-color: rgb(181, 237, 252);
-    margin: 0pc 0px 20px 0px;
+    background-color: rgb(205, 252, 253);
+    margin: 0pc 0px 0px 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-input {
-    margin: 5vh 0vh 0vh 0vh;
-    border-color: rgb(87, 219, 255);
-    border-radius: 10%;
-
-}
-
-.heroSearch {
+.sinput {
     margin: 20px 10px 20px 0px;
+    border-color: rgb(87, 219, 255);
+    border-radius: 15%;
 }
+
