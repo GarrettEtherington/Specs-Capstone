@@ -21,7 +21,7 @@ app.use(
     })
 )
 
-app.get(`/search`, searchFunc)
+app.post(`/search`, searchFunc)
 app.post(`/seed`, seed)
 app.post(`/register`, register)
 

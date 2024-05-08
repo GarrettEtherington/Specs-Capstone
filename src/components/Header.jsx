@@ -21,11 +21,12 @@ const Header = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         // looks at search, sends back data and navigates to new page
-        axios.get(
-            "http://locahost:4545/search", {bodee: search}
+        axios.post(
+            "http://localhost:4545/search", {bodee: search}
         ) .then (
             (res) => {
                 navigate("/SearchResults", { state: res.data})
+                console.log(res)
             }
         )
     }
@@ -47,7 +48,7 @@ const Header = () => {
                 </ul>
             </nav>
             <form onSubmit={handleSubmit}>
-                <input className={styles.sinput} type="text" placeholder="search..." onChange={updateSearch}/>
+                <input className={styles.sinput} type="text" placeholder="search..." onChange={updateSearch} value={search}/>
             </form>
         </header>
     )
