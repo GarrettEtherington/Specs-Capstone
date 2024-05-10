@@ -7,15 +7,15 @@ const sequelize = new Sequelize(CONNECTION_STRING, {dialect: 'postgres'})
 
 module.exports = {
     searchFunc: (req, res) => {
-        console.log(req.body)
         const searchVal = req.body.bodee
-        console.log(typeof searchVal)
+
+        // add logic to account for upper/lower case
 
         sequelize.query(`
-            SELECT heroname FROM heroes
+            SELECT * FROM heroes
             WHERE heroes.heroname = '${searchVal}';
         `).then ((dbRes) => {
-            res.status(200).send(dbRes[0])
+            res.status(200).send(dbRes[0][0])
             console.log(dbRes)
         })
     }

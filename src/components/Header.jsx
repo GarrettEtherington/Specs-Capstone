@@ -6,7 +6,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 
-
 const Header = () => {
     const [search, setSearch] = useState("")
     const navigate = useNavigate()
@@ -18,17 +17,23 @@ const Header = () => {
 
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         // looks at search, sends back data and navigates to new page
-        axios.post(
-            "http://localhost:4545/search", {bodee: search}
+        await axios.post(
+            "http://localhost:4546/search", {bodee: search}
         ) .then (
             (res) => {
-                navigate("/SearchResults", { state: res.data})
-                console.log(res)
+                if (search === res.data.heroname) {
+                    navigate("/HeroPage", { state: res.data})
+                    console.log(res)    
+                } else {
+                    alert (`No Hero With Matching Name`)
+                }
+
             }
         )
+
     }
 
 
