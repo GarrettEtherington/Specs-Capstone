@@ -26,9 +26,11 @@ const Register = () => {
         .post("http://localhost:4546/register", body)
         .then((res) => {
             navigate("/")
+            alert("Successfully Registered")
         })
         .catch((err) => {
             console.log(err)
+            alert("nope")
         })
         console.log(`submit handled`)
     }
