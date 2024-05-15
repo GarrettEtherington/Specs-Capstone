@@ -2,7 +2,7 @@ const express = require (`express`)
 const cors = require (`cors`)
 const dotenv = require (`dotenv`)
 const session = require (`express-session`)
-const {register} = require (`./controllers/Register`)
+const {register} = require (`./controllers/Register.js`)
 const {searchFunc} = require (`./controllers/search.js`)
 const {seed} = require('./seed.js')
 
@@ -24,6 +24,5 @@ app.use(
 app.post(`/search`, searchFunc)
 app.post(`/seed`, seed)
 app.post(`/register`, register)
-
 
 app.listen(PORT, console.log(`still don't have a fun line to show that the port is running on 4545.`))
