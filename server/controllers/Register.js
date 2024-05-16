@@ -23,13 +23,14 @@ module.exports = {
           sequelize
             .query(
               `
-                    INSERT INTO users (username, password)
-                    VALUES ('${username}', '${password}');            
-                `
+            INSERT INTO users (username, password)
+            VALUES ('${username}', '${password}') RETURNING *;            
+        `
             )
             .then((dbRes) => {
               req.session.user = dbRes[0][0];
-              console.log(dbRes[0]);
+              console.log("dbRes", dbRes[0]);
+              console.log(req.session);
               res.status(200).send(dbRes[0]);
             });
         }
